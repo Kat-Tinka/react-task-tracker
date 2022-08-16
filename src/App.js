@@ -9,7 +9,7 @@ const App = () => {
 };
 
 Header.defaultProps = {
-  title: "Task Tracker!!",
+  title: "Task Tracker!",
 };
 
 export default App;

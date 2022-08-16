@@ -5,15 +5,23 @@ import PropTypes from "prop-types";
 const Header = ({ title }) => {
   return (
     <header>
-      <h1 style={{ color: "blueviolet", backgroundColor: "lightgreen" }}>
-        {title}
-      </h1>
+      <h1 style={headingStyle}>{title}</h1>
     </header>
   );
 };
 
 Header.defaultProps = {
   title: "Task Tracker",
+};
+
+// Header.PropTypes = {
+//   title: PropTypes.string.isRequired,
+// };
+
+// If you don't want to use the inline styling-> just create a variable called 'headingStyle = ..." , paste the defnded style , like colors etc into the {}, delite the double curly Braces in the <h1> and pass 'hedaingStyle' in
+const headingStyle = {
+  color: "blueviolet",
+  backgroundColor: "lightgreen",
 };
 
 export default Header;
