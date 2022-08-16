@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const Header = ({ title }) => {
   return (
     <header>
-      <h1 style={headingStyle}>{title}</h1>
+      <h1>{title}</h1>
     </header>
   );
 };
@@ -18,11 +18,12 @@ Header.defaultProps = {
 //   title: PropTypes.string.isRequired,
 // };
 
+//CSS in JS:
 // If you don't want to use the inline styling-> just create a variable called 'headingStyle = ..." , paste the defnded style, like colors etc into the {}, delite the double curly Braces in the <h1> and pass 'headingStyle' in _ that can be used in a dynamic styling( so for now I#ll change it back)
 
-const headingStyle = {
-  color: "blueviolet",
-  backgroundColor: "lightgreen",
-};
+// const headingStyle = {
+//   color: "blueviolet",
+//   backgroundColor: "lightgreen",
+// };
 
 export default Header;
