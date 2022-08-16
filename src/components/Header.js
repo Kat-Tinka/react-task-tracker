@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 // I you want to use style inline- use double{}-> for example with 'color' , we'll set that to a string of a color / backgroundColor value
 const Header = ({ title }) => {
   return (
-    <header>
+    <header className="header">
       <h1>{title}</h1>
+      <button className="btn">Add</button>
     </header>
   );
 };
