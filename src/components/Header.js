@@ -1,22 +1,19 @@
 // use shortCut 'impt' to import PropTypes and...
 import PropTypes from "prop-types";
 
+// I you want to use style inline- use double{}-> for example with 'color' , we'll set that to a string of a color / backgroundColor value
 const Header = ({ title }) => {
   return (
     <header>
-      <h1>{title}</h1>
+      <h1 style={{ color: "blueviolet", backgroundColor: "lightgreen" }}>
+        {title}
+      </h1>
     </header>
   );
 };
 
-// Header.defaultProps = {
-//   title: "Task Tracker",
-// };
-
-// ...and because we know , that we have a title, we use 'title' and we want to create a type of string-> now pass in the <Header/> of App.js 'title={1}-> '1'will be visible, but we will get an error/ warning
-when;
-Header.propTypes = {
-  title: PropTypes.string.isRequired,
+Header.defaultProps = {
+  title: "Task Tracker",
 };
 
 export default Header;
