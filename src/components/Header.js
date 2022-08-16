@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
+// we will bring here the button Component in, so that it's in the same folder
 import Button from "./Button";
 
 // I you want to use style inline- use double{}-> for example with color , we will set that to a string of a color/backgroundColor value
+
+// take a couple of props into this <Button/>:, for example: color, text,onClick. And we have to catch props in the Button.js-File: see "const Button = ({ color, text, ..."
 
 const Header = ({ title }) => {
   const onClick = () => {
