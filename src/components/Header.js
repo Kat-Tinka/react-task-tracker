@@ -1,6 +1,5 @@
-import { upload } from "@testing-library/user-event/dist/upload";
-
-// We can destructure and clean this a bit up, by putting instead of "props" in the const Header whatever you want to pass in -> for Example by adding {}and taking in the 'title' and just call 'title ' in the <h1>
+// use shortCut 'impt' to import PropTypes and...
+import PropTypes from "prop-types";
 
 const Header = ({ title }) => {
   return (
@@ -12,6 +11,11 @@ const Header = ({ title }) => {
 
 Header.defaultProps = {
   title: "Task Tracker",
+};
+
+// ...and because we know , that we have a title, we use 'title' and we want to create a type of string-> now pass in the <Header/> of App.js 'title={1}-> '1'will be visible, but we will get an error
+Header.propTypes = {
+  title: PropTypes.string,
 };
 
 export default Header;
