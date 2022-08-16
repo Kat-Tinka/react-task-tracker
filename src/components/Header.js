@@ -4,10 +4,13 @@ import Button from "./Button";
 // I you want to use style inline- use double{}-> for example with color , we will set that to a string of a color/backgroundColor value
 
 const Header = ({ title }) => {
+  const onClick = () => {
+    console.log("Click");
+  };
   return (
     <header className="header">
       <h1>{title}</h1>
-      <Button color="green" text="Add" />
+      <Button color="green" text="Add" onClick={onClick} />
     </header>
   );
 };
