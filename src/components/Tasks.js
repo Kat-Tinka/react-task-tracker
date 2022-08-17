@@ -1,4 +1,4 @@
-// new file "Tasks.js" created  with a variable called tasks and set that to an array-> paste differents tasks (=> object) with id, text,day, reminder:true/false (boolean value)-> becuae we don't want this to be part od our component, we want this to be part of our state, therefore we will change this later
+// new file "Tasks.js" created  with a variable called tasks and set that to an array-> paste differents tasks (=> object) with id, text,day, reminder:true/false (boolean value)-> because we don't want this to be part of our component, we want this to be part of our STATE, therefore we will change this later!
 // => so we first start here a demo, to loop through these tasks and see the output-> by creating a list ,by using the map().array Method
 
 // TASK LIST:
@@ -23,7 +23,9 @@ const tasks = [
   },
 ];
 
-// =>LOOP through the tasks and see the output-> by creating a list ,by using the MAP().ARRAY METHOD
+// =>LOOP through the tasks and see the output-> by creating a list,by using the MAP().ARRAY METHOD
+
+//error in console, because the parent of that list (in this case <h3> should have a key prop, which should be something unique
 const Tasks = () => {
   return (
     <>
@@ -33,6 +35,6 @@ const Tasks = () => {
     </>
   );
 };
-// =>nothing will be visible yet, because we haven't brought in the task component yet(go to=> App.js and import Tasks)
+// =>nothing will be visible yet, because we haven't brought in the task component yet(->go to => App.js and import Tasks)
 
 export default Tasks;
