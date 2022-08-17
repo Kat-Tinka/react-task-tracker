@@ -1,4 +1,6 @@
-// new file "Tasks.js" created  with a variable called tasks and set that to an array-> paste differents tasks (=> object) with id, text,day, reminder:true/false (boolean value)-> because we don't want this to be part of our component, we want this to be part of our STATE, therefore we will change this later!
+// new file "Tasks.js" created  with a variable called tasks and set that to an array-> paste differents tasks (=> object) with id, text,day, reminder:true/false (boolean value)
+//-> because we don't want this to be seperate from our component, we want this to be part of our STATE, therefore we will change this later!
+
 // => so we first start here a demo, to loop through these tasks and see the output-> by creating a list ,by using the map().array Method
 
 // TASK LIST:
