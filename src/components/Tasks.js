@@ -1,34 +1,32 @@
-// new file "Tasks.js" created  with a variable called tasks and set that to an array-> paste differents tasks (=> object) with id, text,day, reminder:true/false (boolean value)
-//-> because we don't want this to be seperate from our component, we want this to be part of our STATE, therefore we will change this later!
+//-> because we don't want this to be seperate from our component, we want this to be part of our STATE, therefore we will change this NOW:
+// TASK LIST:deleted const Tasks and cutted out Array itsself
+// to use state inside of a function, I use a HOOK called useState from 'react' directly
+// then above the return we use const[tasks, setTasks] and also a function to update this state (setTasks)
+// in the useState-parenthesis()is the default that I want to use for this peace of state for my tasks-> so just paste in the earlier cutted out array of tasks
 
-// => so we first start here a demo, to loop through these tasks and see the output-> by creating a list ,by using the map().array Method
+import { useState } from "react";
 
-// TASK LIST:
-const tasks = [
-  {
-    id: 1,
-    text: "Doc Appointment",
-    day: "Aug 17th at 4:30 pm",
-    reminder: true,
-  },
-  {
-    id: 2,
-    text: "Kingas Birthday",
-    day: "Aug 23th at 8:30 pm",
-    reminder: true,
-  },
-  {
-    id: 3,
-    text: "Supermarket Shopping",
-    day: "Aug 27th at 9:00 am",
-    reminder: false,
-  },
-];
-
-// =>LOOP through the tasks and see the output-> by creating a list,by using the MAP().ARRAY METHOD
-
-//error in console, because the parent of that list (in this case <h3> should have a key prop, which should be something unique
 const Tasks = () => {
+  const [tasks, setTasks] = useState([
+    {
+      id: 1,
+      text: "Doc Appointment",
+      day: "Aug 17th at 4:30 pm",
+      reminder: true,
+    },
+    {
+      id: 2,
+      text: "Kingas Birthday",
+      day: "Aug 23th at 8:30 pm",
+      reminder: true,
+    },
+    {
+      id: 3,
+      text: "Supermarket Shopping",
+      day: "Aug 27th at 9:00 am",
+      reminder: false,
+    },
+  ]);
   return (
     <>
       {tasks.map((task) => (
@@ -37,6 +35,6 @@ const Tasks = () => {
     </>
   );
 };
-// =>nothing will be visible yet, because we haven't brought in the task component yet(->go to => App.js and import Tasks)
+// =>after passing in the tasks-array as the default useState(), there will be no changes visible, because this tasks-variable will still be used in the return with tasks.map, but except of having it come from outside of our component, it's now part of my component state
 
 export default Tasks;
