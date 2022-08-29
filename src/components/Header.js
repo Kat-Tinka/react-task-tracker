@@ -22,7 +22,7 @@ Header.defaultProps = {
   title: "Task Tracker",
 };
 
-// Be aware of typo errors: we used the name PropTypes but in Header.propTypes -> teh firtst letter has to be small
+// Be aware of typo errors: we used the name PropTypes but in Header.propTypes -> the first letter has to be small
 Header.propTypes = {
   title: PropTypes.string.isRequired,
 };
